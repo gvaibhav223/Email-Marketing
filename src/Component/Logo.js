@@ -10,11 +10,7 @@ const Logo = () => {
         navigate("/");
       }}
     >
-      <img
-        src="./Images/Building-images/logo.png"
-        alt="Logo"
-        className="img-fluid"
-      />
+      <img src="./Images/logo.png" alt="Logo" className="img-fluid" />
     </div>
   );
 };

@@ -11,30 +11,14 @@ import ContactUs from "./ContactUs";
 const LandingPage = () => {
   return (
     <>
-      <section>
-        <Home />
-      </section>
-      <section>
-        <Reputation />
-      </section>
-      <section>
-        <About />
-      </section>
-      <section>
-        <Services />
-      </section>
-      <section>
-        <FreeConsultant />
-      </section>
-      <section>
-        <Count />
-      </section>
-      <section>
-        <Projects />
-      </section>
-      <section>
-        <ContactUs />
-      </section>
+      <Home />
+      <Reputation />
+      <About />
+      <Services />
+      <FreeConsultant />
+      <Count />
+      <Projects />
+      <ContactUs />
     </>
   );
 };

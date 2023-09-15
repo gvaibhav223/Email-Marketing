@@ -11,7 +11,15 @@ import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
+import {
+  UilClockThree,
+  UilMapMarker,
+  UilInstagram,
+  UilLinkedin,
+  UilFacebook,
+  UilPhone,
+} from "@iconscout/react-unicons";
+
 import Logo from "../../Component/Logo";
 import { useNavigate } from "react-router-dom";
 
@@ -51,37 +59,60 @@ function DrawerAppBar(props) {
   return (
     <>
       {/* <CssBaseline /> */}
+      <AppBar component="nav" className="app-bar-mini">
+        <Toolbar className="toolbar-mini w-100">
+          <div className="topbar">
+            <div className="info">
+              <UilClockThree /> Monday - Friday8AM - 9PM
+            </div>
+            <div className="info">
+              <UilMapMarker /> 725 Park Ave, New York
+            </div>
+            <div className="social-icon">
+              <UilInstagram />
+              <UilFacebook />
+              <UilLinkedin />
+            </div>
+          </div>
+        </Toolbar>
+      </AppBar>
       <AppBar component="nav" className="app-bar">
         <Toolbar className="toolbar-navigation">
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { sm: "block" } }}
-          >
-            <Logo />
-          </Typography>
-          <Box
-            sx={{ display: { xs: "none", sm: "block" } }}
-            className="navlinkcontainer"
-          >
-            {navItems.map((item) => (
-              <div
-                className="navlinks nav-link"
-                key={item}
-                sx={{ color: "inherit" }}
-              >
-                {item}
+          <Box className="container d-flex align-items-center">
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="start"
+              onClick={handleDrawerToggle}
+              sx={{ mr: 2, display: { sm: "none" } }}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Typography
+              variant="h6"
+              component="div"
+              sx={{ flexGrow: 1, display: { sm: "block" } }}
+            >
+              <Logo />
+            </Typography>
+            <Box
+              sx={{ display: { xs: "none", sm: "block" } }}
+              className="navlinkcontainer"
+            >
+              {navItems.map((item) => (
+                <div className="navlinks" key={item} sx={{ color: "inherit" }}>
+                  {item}
+                </div>
+              ))}
+              <div className="phone-container">
+                <div className="">
+                  <IconButton className="phone-circle">
+                    <UilPhone />
+                  </IconButton>
+                  <span>+(91) 9856985698</span>
+                </div>
               </div>
-            ))}
+            </Box>
           </Box>
         </Toolbar>
       </AppBar>

@@ -31,7 +31,7 @@ function App() {
           <Route element={<DashboardLayout />}>
             {/* <Route path="/dashboard" element={<Dashboard />} /> */}
             <Route path="/contentmanagement" element={<ContentManagement />} />
-            <Route path="/dashboardredux" element={<Dashboard />} />
+            <Route path="/dashboard" element={<Dashboard />} />
           </Route>
         </Routes>
       </BrowserRouter>
